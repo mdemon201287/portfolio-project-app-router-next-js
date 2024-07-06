@@ -1,4 +1,3 @@
-// app/layout.tsx
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -23,8 +22,8 @@ export default function RootLayout({
         <main className="container mx-auto px-4 py-8">
           {children}
         </main>
-        <footer className="bg-dark text-white text-center py-4">
-          <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        <footer className="bg-dark text-center py-4">
+          <p className="text-pink-500">&copy; 2023 My Portfolio. All rights reserved.</p>
         </footer>
       </body>
     </html>
