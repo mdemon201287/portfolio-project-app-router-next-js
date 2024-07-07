@@ -1,4 +1,3 @@
-// app/projects/[id]/page.tsx
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,7 +16,11 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
       <div className="p-8">
         <h1 className="text-3xl font-bold mb-4 text-primary">{project.title}</h1>
         <p className="text-gray-600 mb-6">{project.fullDescription}</p>
-        <Link href="/projects" className="text-secondary hover:text-secondary-dark transition duration-300">
+        <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-secondary-dark transition duration-300">
+          View on GitHub
+        </Link>
+        <br />
+        <Link href="/projects" className="text-secondary hover:text-secondary-dark transition duration-300 mt-4 block">
           &larr; Back to Projects
         </Link>
       </div>
